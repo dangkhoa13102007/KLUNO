@@ -57,81 +57,6 @@
         .fc-pos-badge { display:inline-flex; align-items:center; gap:6px; padding:5px 10px; border-radius:999px; font-size:11px; font-weight:800; background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.22); }
         .fc-back-audio { width:52px; height:52px; border-radius:16px; display:inline-flex; align-items:center; justify-content:center; background:#fff; color:#2563eb; box-shadow:0 8px 20px rgba(0,0,0,.14); transition:transform .2s, opacity .2s; }
         .fc-back-audio:hover { transform:scale(1.05); }
-
-        /* =============================
-           KLUNO FLASHCARD — NEW UI
-           Thiết kế tối giản theo ảnh tham chiếu
-           ============================= */
-        #view-flashcards { background: transparent; }
-        .kluno-fc-shell { width:100%; padding:8px 0 0; }
-        .kluno-fc-card-wrap { position:relative; width:100%; max-width:1000px; margin:0 auto; }
-        .kluno-fc-card { width:100%; height:480px; position:relative; }
-        .kluno-fc-inner { width:100%; height:100%; }
-        .kluno-fc-face {
-            width:100%; height:100%; box-sizing:border-box; overflow:hidden;
-            border:1px solid #e1e5ef; border-radius:30px;
-            background:#fff; color:#172033;
-            box-shadow:0 16px 34px rgba(15,23,42,.08), 0 2px 6px rgba(15,23,42,.04);
-            padding:34px 38px 30px;
-        }
-        .kluno-fc-front { display:flex; flex-direction:column; justify-content:space-between; align-items:stretch; }
-        .kluno-fc-back { display:flex; flex-direction:column; justify-content:space-between; align-items:stretch; }
-        .kluno-fc-settings {
-            width:30px; height:30px; border:0; background:transparent; color:#657084;
-            display:flex; align-items:center; justify-content:center; font-size:15px; cursor:pointer;
-            transition:.18s; border-radius:8px;
-        }
-        .kluno-fc-settings:hover { background:#f1f3f7; color:#27344a; }
-        .kluno-fc-main { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:10px 18px 22px; }
-        .kluno-fc-word { margin:0; font-size:clamp(42px,6vw,66px); line-height:1.05; font-weight:800; letter-spacing:-.045em; color:#182033; }
-        .kluno-fc-pronunciation { margin-top:25px; display:flex; align-items:center; justify-content:center; gap:11px; color:#596377; font-size:20px; }
-        .kluno-fc-pronunciation #fc-type-badge { font-weight:800; font-size:17px; }
-        .kluno-fc-pronunciation #fc-ipa { font-family:Georgia, 'Times New Roman', serif; font-style:italic; font-size:20px; }
-        .kluno-fc-dash { color:#9aa2b1; }
-        .kluno-fc-bottom { display:flex; align-items:center; justify-content:space-between; width:100%; }
-        .kluno-fc-bottom-right { display:flex; align-items:center; gap:26px; }
-        .kluno-fc-icon-btn { border:0; background:transparent; color:#596579; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:.18s; }
-        .kluno-fc-icon-btn:hover { color:#1d2b40; transform:scale(1.05); }
-        .kluno-fc-mic { width:52px; height:52px; border-radius:17px; background:#111b31; color:#fff; font-size:21px; box-shadow:0 8px 18px rgba(15,23,42,.15); }
-        .kluno-fc-mic:hover { color:#fff; background:#1d2943; }
-        .kluno-fc-speaker { width:30px; height:30px; font-size:22px; }
-        .kluno-fc-switch { width:34px; height:19px; border:0; border-radius:999px; padding:2px; background:#cfd5de; cursor:pointer; display:flex; align-items:center; transition:.18s; }
-        .kluno-fc-switch-knob { width:15px; height:15px; border-radius:50%; background:#fff; box-shadow:0 1px 3px rgba(15,23,42,.18); transform:translateX(0); transition:.18s; }
-        .kluno-fc-switch.is-on { background:#2f80ed; justify-content:flex-end; }
-        .kluno-fc-back-main { padding-top:20px; }
-        .kluno-fc-meaning { margin:0; font-size:clamp(38px,5.2vw,60px); line-height:1.08; font-weight:800; letter-spacing:-.04em; color:#172033; }
-        .kluno-fc-synonyms { margin:24px 0 10px; color:#5e687a; font-size:18px; text-decoration:underline; text-decoration-style:dotted; text-underline-offset:5px; }
-        .kluno-fc-example-row { max-width:760px; display:flex; align-items:center; justify-content:center; gap:9px; margin-top:4px; }
-        .kluno-fc-example { margin:0; color:#606a7d; font-size:18px; font-style:italic; line-height:1.5; }
-        .kluno-fc-inline-audio { width:27px; height:27px; border:0; background:transparent; color:#5f6a7e; cursor:pointer; display:flex; align-items:center; justify-content:center; }
-        .kluno-fc-inline-audio:hover { color:#1d2b40; }
-        .kluno-fc-back-bottom { padding-top:0; }
-        .kluno-fc-hint { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:6px; color:#5d6678; font-size:14px; margin:18px 0 28px; }
-        .kluno-fc-hint kbd { min-width:24px; padding:2px 7px; border:1px solid #dfe3ea; background:#fff; border-radius:5px; box-shadow:0 1px 1px rgba(15,23,42,.03); color:#4e596d; font-family:inherit; }
-        .kluno-fc-controls { display:grid; grid-template-columns:auto 64px minmax(120px,1fr) 64px auto; align-items:center; gap:26px; }
-        .kluno-fc-progress-btn, .kluno-fc-nav-btn, .kluno-fc-shuffle { border:0; background:#fff; color:#18243a; box-shadow:0 7px 18px rgba(15,23,42,.06); border:1px solid #edf0f4; cursor:pointer; transition:.18s; }
-        .kluno-fc-progress-btn { height:50px; border-radius:16px; padding:0 17px; display:inline-flex; align-items:center; gap:9px; font-size:15px; font-weight:700; }
-        .kluno-fc-progress-btn i { font-size:18px; }
-        .kluno-fc-nav-btn, .kluno-fc-shuffle { width:58px; height:50px; border-radius:15px; display:flex; align-items:center; justify-content:center; font-size:18px; }
-        .kluno-fc-nav-btn:hover, .kluno-fc-progress-btn:hover, .kluno-fc-shuffle:hover { background:#fafbfc; transform:translateY(-1px); }
-        .kluno-fc-counter { text-align:center; color:#6a7384; font-size:14px; }
-        .kluno-fc-counter span { color:#4f596b; font-weight:500; }
-        .kluno-fc-guide { display:block; margin:22px auto 0; border:0; background:transparent; color:#748095; text-decoration:underline; text-underline-offset:4px; font-size:14px; cursor:pointer; }
-        .kluno-fc-guide:hover { color:#344158; }
-        .kluno-fc-options { position:absolute; top:16px; left:18px; z-index:20; width:250px; padding:15px; background:#fff; border:1px solid #e3e7ee; border-radius:16px; box-shadow:0 18px 38px rgba(15,23,42,.12); }
-        @media (max-width: 720px) {
-            .kluno-fc-card { height:430px; }
-            .kluno-fc-face { border-radius:24px; padding:26px 24px 24px; }
-            .kluno-fc-word { font-size:46px; }
-            .kluno-fc-meaning { font-size:42px; }
-            .kluno-fc-example { font-size:15px; }
-            .kluno-fc-bottom-right { gap:17px; }
-            .kluno-fc-controls { grid-template-columns:1fr 52px 82px 52px 1fr; gap:8px; }
-            .kluno-fc-progress-btn { padding:0; width:52px; justify-content:center; }
-            .kluno-fc-progress-btn span { display:none; }
-            .kluno-fc-shuffle { width:52px; }
-            .kluno-fc-nav-btn { width:52px; }
-        }
  
         /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 6px; height: 6px; }
@@ -252,7 +177,6 @@
             <button class="lp-nav-btn" id="nav-ielts" onclick="app.switchView('ielts')"><i class="fa-solid fa-chart-pie text-emerald-500"></i><span class="lp-nav-label">Ước lượng IELTS</span></button>
  
             <div class="lp-section-title mt-2">PHÁT TRIỂN</div>
-            <button class="lp-nav-btn" id="nav-placement" onclick="app.startPlacementTest()"><i class="fa-solid fa-compass text-indigo-500"></i><span class="lp-nav-label">Đánh giá đầu vào</span></button>
             <button class="lp-nav-btn" id="nav-leaderboard" onclick="app.switchView('leaderboard')"><i class="fa-solid fa-trophy text-amber-500"></i><span class="lp-nav-label">Xếp hạng</span></button>
         </div>
  
@@ -518,105 +442,81 @@
             </div>
         </section>
  
-        <!-- VIEW 4: FLASHCARDS — thiết kế mới tối giản theo mẫu tham chiếu -->
-        <section id="view-flashcards" class="app-view hidden max-w-5xl mx-auto pt-2 pb-8">
-            <div class="kluno-fc-shell">
-                <div class="kluno-fc-card-wrap">
-                    <div id="flashcard-element" class="kluno-fc-card perspective-1000 cursor-pointer" onclick="app.flipFlashcard()" aria-label="Flashcard">
-                        <div id="flashcard-inner" class="kluno-fc-inner relative w-full h-full duration-500 transform-style-3d transition-transform">
-
-                            <!-- MẶT TRƯỚC -->
-                            <div class="kluno-fc-face kluno-fc-front absolute inset-0 backface-hidden">
-                                <button type="button" class="kluno-fc-settings" onclick="event.stopPropagation(); app.toggleFlashcardOptions()" aria-label="Tùy chọn flashcard" title="Tùy chọn">
+        <!-- VIEW 4: FLASHCARDS -->
+        <section id="view-flashcards" class="app-view max-w-3xl mx-auto pt-4 space-y-6">
+            <div class="flex items-center justify-between mb-2">
+                <div>
+                    <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white">Flashcards 3D</h2>
+                    <p class="text-xs text-slate-500">Phím <kbd class="font-mono bg-slate-100 dark:bg-slate-800 px-1 rounded border border-slate-200 dark:border-slate-700">Space</kbd> lật thẻ, mũi tên trái/phải để đổi.</p>
+                </div>
+                <div class="text-sm font-semibold text-slate-500">
+                    Thẻ <span id="fc-current-index" class="text-brand-600 dark:text-brand-400 font-bold text-lg">0</span> / <span id="fc-total-count">0</span>
+                </div>
+            </div>
+            <div class="flex justify-center my-6">
+                <div id="flashcard-element" class="w-full h-[400px] perspective-1000 cursor-pointer" onclick="app.flipFlashcard()">
+                    <div id="flashcard-inner" class="relative w-full h-full duration-500 transform-style-3d shadow-xl rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 transition-transform">
+                        <div class="absolute inset-0 w-full h-full backface-hidden rounded-3xl p-8 flex flex-col justify-between items-center text-center">
+                            <div class="w-full flex justify-between items-center text-xs text-slate-400 font-bold uppercase tracking-wider">
+                                <button type="button" onclick="event.stopPropagation(); app.showCurrentWordInfo();" class="w-9 h-9 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition" aria-label="Thông tin từ">
                                     <i class="fa-solid fa-sliders"></i>
                                 </button>
-
-                                <div class="kluno-fc-main">
-                                    <h2 id="fc-word" class="kluno-fc-word">—</h2>
-                                    <div class="kluno-fc-pronunciation">
-                                        <span id="fc-type-badge">—</span>
-                                        <span class="kluno-fc-dash">-</span>
-                                        <span id="fc-ipa">—</span>
-                                    </div>
-                                </div>
-
-                                <div class="kluno-fc-bottom">
-                                    <button type="button" id="fc-mic-btn" class="kluno-fc-icon-btn kluno-fc-mic" onclick="event.stopPropagation(); app.startFlashcardPronunciation()" aria-label="Luyện phát âm" title="Luyện phát âm">
-                                        <i class="fa-solid fa-microphone"></i>
-                                    </button>
-                                    <div class="kluno-fc-bottom-right">
-                                        <button type="button" id="fc-autoplay-toggle" class="kluno-fc-switch" onclick="event.stopPropagation(); app.toggleFlashcardAutoPlay()" aria-label="Tự động phát âm" title="Tự động phát âm">
-                                            <span class="kluno-fc-switch-knob"></span>
-                                        </button>
-                                        <button type="button" class="kluno-fc-icon-btn kluno-fc-speaker" onclick="event.stopPropagation(); app.speakCurrentWord()" aria-label="Nghe phát âm" title="Nghe phát âm">
-                                            <i class="fa-solid fa-volume-high"></i>
-                                        </button>
-                                    </div>
-                                </div>
+                                <span>Chạm để lật <i class="fa-solid fa-rotate ml-1"></i></span>
                             </div>
-
-                            <!-- MẶT SAU -->
-                            <div class="kluno-fc-face kluno-fc-back absolute inset-0 backface-hidden rotate-y-180">
-                                <button type="button" class="kluno-fc-settings" onclick="event.stopPropagation(); app.toggleFlashcardOptions()" aria-label="Tùy chọn flashcard" title="Tùy chọn">
-                                    <i class="fa-solid fa-sliders"></i>
+                            <div class="space-y-5">
+                                <h2 id="fc-word" class="text-4xl sm:text-5xl font-black text-slate-900 dark:text-white">Vocabulary</h2>
+                                <div class="flex items-center justify-center gap-3 text-lg text-slate-500">
+                                    <span id="fc-type-badge" class="font-bold lowercase">noun</span>
+                                    <span>·</span>
+                                    <p id="fc-ipa" class="font-mono italic">/vəˈkæbjəleri/</p>
+                                </div>
+                                <p id="fc-synonyms" class="hidden text-sm text-brand-600 dark:text-brand-400 italic underline decoration-dotted underline-offset-4"></p>
+                            </div>
+                            <div class="w-full flex items-center justify-end gap-3 text-slate-500">
+                                <button type="button" onclick="event.stopPropagation(); app.speakCurrentWord();" class="w-11 h-11 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 transition text-xl" aria-label="Nghe phát âm">
+                                    <i class="fa-solid fa-volume-high"></i>
                                 </button>
-
-                                <div class="kluno-fc-main kluno-fc-back-main">
-                                    <h2 id="fc-meaning" class="kluno-fc-meaning">—</h2>
-                                    <p id="fc-synonyms" class="kluno-fc-synonyms hidden"></p>
-                                    <div class="kluno-fc-example-row">
-                                        <p id="fc-example" class="kluno-fc-example">—</p>
-                                        <button type="button" class="kluno-fc-inline-audio" onclick="event.stopPropagation(); app.speakCurrentExample()" aria-label="Nghe ví dụ" title="Nghe câu ví dụ">
-                                            <i class="fa-solid fa-volume-high"></i>
-                                        </button>
-                                        <button type="button" class="kluno-fc-inline-audio" onclick="event.stopPropagation(); app.speakCurrentExample()" aria-label="Dịch câu ví dụ" title="Nghe ví dụ">
-                                            <i class="fa-solid fa-language"></i>
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div class="kluno-fc-bottom kluno-fc-back-bottom">
-                                    <div></div>
-                                    <div class="kluno-fc-bottom-right">
-                                        <button type="button" id="fc-autoplay-toggle-back" class="kluno-fc-switch" onclick="event.stopPropagation(); app.toggleFlashcardAutoPlay()" aria-label="Tự động phát âm" title="Tự động phát âm">
-                                            <span class="kluno-fc-switch-knob"></span>
-                                        </button>
-                                        <button type="button" class="kluno-fc-icon-btn kluno-fc-speaker" onclick="event.stopPropagation(); app.speakCurrentWord()" aria-label="Nghe từ" title="Nghe từ">
-                                            <i class="fa-solid fa-volume-high"></i>
-                                        </button>
-                                    </div>
-                                </div>
                             </div>
                         </div>
+                        <div class="absolute inset-0 w-full h-full backface-hidden rotate-y-180 rounded-3xl p-7 sm:p-8 flex flex-col justify-between items-center text-center bg-brand-600 text-white border border-brand-500 shadow-brand-500/20">
+                            <div class="w-full flex justify-between items-center text-xs text-brand-200 font-bold uppercase tracking-wider">
+                                <span>Thông tin từ</span>
+                                <span>Chạm để lật <i class="fa-solid fa-rotate ml-1"></i></span>
+                            </div>
+                            <div class="space-y-3 max-w-lg w-full">
+                                <div class="flex flex-wrap justify-center gap-2">
+                                    <span id="fc-back-pos" class="fc-pos-badge">Danh từ</span>
+                                    <span id="fc-back-ipa" class="fc-pos-badge font-mono">/---/</span>
+                                </div>
+                                <h3 id="fc-back-word" class="text-2xl sm:text-3xl font-extrabold text-white">Vocabulary</h3>
+                                <div class="rounded-2xl bg-white/15 border border-white/20 p-5">
+                                    <p class="text-xs uppercase tracking-wider font-bold text-blue-100 mb-1">Nghĩa tiếng Việt</p>
+                                    <h3 id="fc-meaning" class="text-2xl sm:text-3xl font-extrabold text-white">Từ vựng</h3>
+                                </div>
+                                <button type="button" onclick="event.stopPropagation(); app.speakCurrentWord();" class="fc-back-audio" aria-label="Nghe từ vựng ở mặt sau" title="Nghe phát âm tiếng Anh">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                </button>
+                                <div class="w-full mt-4 px-1">
+                                    <div class="flex items-center justify-center gap-2 mb-2">
+                                        <span class="text-[10px] uppercase tracking-widest font-black text-blue-100">Ví dụ</span>
+                                        <button type="button" onclick="event.stopPropagation(); app.speakCurrentExample();" class="fc-back-audio !w-9 !h-9 !text-sm" aria-label="Nghe câu ví dụ" title="Nghe câu ví dụ bằng tiếng Anh">
+                                            <i class="fa-solid fa-volume-high"></i>
+                                        </button>
+                                    </div>
+                                    <div class="p-4 rounded-xl bg-white/10 text-sm italic border border-white/20 text-blue-50">
+                                        "<span id="fc-example">Learning new vocabulary is fun.</span>"
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-xs text-brand-200">Mặt sau • Tiếng Việt + Phát âm</div>
+                        </div>
                     </div>
-
-                    <div id="fc-options" class="kluno-fc-options hidden">
-                        <div class="font-bold text-slate-800 mb-2">Tùy chọn thẻ</div>
-                        <label class="flex items-center justify-between gap-4 text-sm text-slate-600 cursor-pointer">
-                            <span>Tự động đọc khi lật thẻ</span>
-                            <button type="button" class="kluno-fc-switch" onclick="app.toggleFlashcardAutoPlay()"><span class="kluno-fc-switch-knob"></span></button>
-                        </label>
-                    </div>
-
-                    <div class="kluno-fc-hint">
-                        <span>Phím tắt:</span>
-                        <kbd>←</kbd><kbd>→</kbd><span>để chuyển thẻ</span>
-                        <span>•</span>
-                        <kbd>Space</kbd><span>/</span><kbd>Enter</kbd><span>hoặc để lật thẻ</span>
-                    </div>
-
-                    <div class="kluno-fc-controls">
-                        <button type="button" class="kluno-fc-progress-btn" onclick="app.switchView('dashboard')" title="Xem tiến độ">
-                            <i class="fa-solid fa-layer-group"></i><span>Tiến độ</span>
-                        </button>
-                        <button type="button" class="kluno-fc-nav-btn" onclick="app.prevFlashcard()" aria-label="Thẻ trước"><i class="fa-solid fa-arrow-left"></i></button>
-                        <div class="kluno-fc-counter">Thẻ <span id="fc-current-index">2</span> / <span id="fc-total-count">27</span></div>
-                        <button type="button" class="kluno-fc-nav-btn" onclick="app.nextFlashcard()" aria-label="Thẻ tiếp theo"><i class="fa-solid fa-arrow-right"></i></button>
-                        <button type="button" class="kluno-fc-shuffle" onclick="app.shuffleFlashcards()" aria-label="Trộn thẻ" title="Trộn thẻ"><i class="fa-solid fa-shuffle"></i></button>
-                    </div>
-
-                    <button type="button" class="kluno-fc-guide" onclick="app.showFlashcardGuide()">Xem hướng dẫn cách học</button>
                 </div>
+            </div>
+            <div class="flex items-center justify-center gap-4">
+                <button onclick="app.prevFlashcard()" class="w-14 h-14 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm text-slate-700 dark:text-white text-xl hover:bg-slate-50 transition" aria-label="Quay lại"><i class="fa-solid fa-chevron-left"></i></button>
+                <button onclick="app.toggleMasteryCurrentWord()" id="fc-mastery-btn" class="flex-grow max-w-[200px] h-14 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold shadow-md flex items-center justify-center gap-2 transition"><i class="fa-solid fa-check"></i> Đã nhớ</button>
+                <button onclick="app.nextFlashcard()" class="w-14 h-14 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm text-slate-700 dark:text-white text-xl hover:bg-slate-50 transition" aria-label="Tiếp theo"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
         </section>
  
@@ -797,17 +697,6 @@
                 </div>
             </div>
  
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 shadow-sm">
-                    <div class="flex items-center justify-between mb-4"><div><h3 class="text-lg font-black">Năng lực theo kỹ năng</h3><p class="text-xs text-slate-500">Tổng hợp từ các lần luyện tập gần đây</p></div><span id="dash-cefr" class="px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 text-xs font-black">Chưa đánh giá</span></div>
-                    <div id="skill-bars" class="space-y-4"></div>
-                </div>
-                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 shadow-sm">
-                    <div class="flex items-center justify-between mb-4"><div><h3 class="text-lg font-black">Kết quả trắc nghiệm</h3><p class="text-xs text-slate-500">Đúng / sai theo từng nhóm kỹ năng</p></div><span id="quiz-accuracy" class="text-2xl font-black">0%</span></div>
-                    <div id="quiz-bars" class="space-y-4"></div>
-                </div>
-            </div>
-
             <!-- Quote Truyền Cảm Hứng -->
             <div class="bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/50 rounded-3xl p-6 flex flex-col md:flex-row items-center md:items-start gap-6 shadow-sm">
                 <div class="w-20 h-20 shrink-0 rounded-full overflow-hidden bg-amber-100 border-2 border-white shadow-sm">
@@ -1052,9 +941,6 @@
                 this.supabase = null;
                 this.currentUser = null;
                 this.authMode = 'login';
-                this.profile = this.loadProfile();
-                this.placement = { index: 0, score: 0, answers: [], questions: [] };
-                this.quizStats = this.loadQuizStats();
             }
  
             init() {
@@ -1062,7 +948,6 @@
                 this.switchView('dashboard');
                 
                 this.initSupabase();
-                this.renderGrowthDashboard();
                 
                 document.addEventListener('keydown', (e) => {
                     if (this.currentView === 'flashcards') {
@@ -1084,13 +969,10 @@
                             this.supabase.auth.getSession().then(({ data }) => {
                                 this.currentUser = data?.session?.user || null;
                                 this.updateAuthUI();
-                                if(this.currentUser) { this.syncProfile().catch(()=>{}); if(!this.profile.cefr) setTimeout(()=>this.startPlacementTest(), 500); }
-                                else if(location.pathname === '/app' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') location.replace('/');
                             });
                             this.supabase.auth.onAuthStateChange((evt, session) => {
                                 this.currentUser = session?.user || null;
                                 this.updateAuthUI();
-                                if(this.currentUser) { this.syncProfile().catch(()=>{}); if(!this.profile.cefr) setTimeout(()=>this.startPlacementTest(), 500); }
                             });
                         }
                     }).catch(e => console.warn("Supabase not connected yet. Running locally."));
@@ -1187,7 +1069,6 @@
                 if (viewName === 'ai-image') this.initAIImageView();
                 if (viewName === 'srs-review') this.renderSrsCard();
                 if (viewName === 'roadmap') this.renderRoadmap();
-                if (viewName === 'placement') this.renderPlacementQuestion();
                 if (viewName === 'leaderboard') {
                     this.renderLeaderboard();
                     this.renderDailyQuote();
@@ -1207,12 +1088,11 @@
             // LẶP LẠI NGẮT QUÃNG (SPACED REPETITION - kiểu SM-2 rút gọn)
             // ===============================
             ensureProgress(w) {
-                if (!w.progress) w.progress = { masteryLevel: 0, wrongCount: 0, nextReview: 0, lastReviewed: 0, easeFactor: 2.5, repetitions: 0, interval: 0 };
+                if (!w.progress) w.progress = { masteryLevel: 0, wrongCount: 0, nextReview: 0 };
                 const p = w.progress;
                 if (typeof p.masteryLevel !== 'number') p.masteryLevel = 0;
                 if (typeof p.wrongCount !== 'number') p.wrongCount = 0;
                 if (typeof p.nextReview !== 'number') p.nextReview = 0;
-                if (typeof p.lastReviewed !== 'number') p.lastReviewed = 0;
                 if (typeof p.repetitions !== 'number') p.repetitions = 0;
                 if (typeof p.easeFactor !== 'number') p.easeFactor = 2.5;
                 if (typeof p.interval !== 'number') p.interval = 0;
@@ -1246,14 +1126,12 @@
                     p.masteryLevel = Math.max(0, p.masteryLevel - 1);
                     word.mastered = false;
                 }
-                p.lastReviewed = Date.now();
                 p.nextReview = Date.now() + p.interval * DAY;
-                this.syncWordMastery(word).catch(()=>{});
             }
  
             resetWordProgress(word) {
                 const p = this.ensureProgress(word);
-                p.repetitions = 0; p.interval = 0; p.easeFactor = 2.5; p.masteryLevel = 0; p.nextReview = 0; p.lastReviewed = 0;
+                p.repetitions = 0; p.interval = 0; p.easeFactor = 2.5; p.masteryLevel = 0; p.nextReview = 0;
                 word.mastered = false;
             }
  
@@ -1460,8 +1338,6 @@
  
             changeActiveSet(setId) {
                 this.currentSetId = setId;
-                this.flashcardIndex = 0;
-                this.isFlipped = false;
                 this.populateSetSelector();
                 this.switchView(this.currentView);
             }
@@ -1638,6 +1514,14 @@
                 u.lang = selectEl ? selectEl.value : 'en-US';
                 this.synth.speak(u);
             }
+
+            showCurrentWordInfo() {
+                const set = this.getCurrentSet();
+                const w = set?.words?.[this.flashcardIndex];
+                if (!w) return;
+                const pos = this.normalizePartOfSpeech(w.type);
+                alert(`${w.en}\n\nTừ loại: ${pos.label}\nIPA: ${w.ipa || 'Chưa có'}\nNghĩa: ${w.vi || 'Chưa có'}\nCEFR: ${w.cefr || 'Chưa có'}`);
+            }
             playFx(isCorrect) {
                 try {
                     const ctx = new (window.AudioContext || window.webkitAudioContext)();
@@ -1648,78 +1532,78 @@
             }
  
             initFlashcards() {
-                this.flashcardIndex = 0;
-                this.isFlipped = false;
-                this.flashcardAutoPlay = this.flashcardAutoPlay ?? false;
+                this.flashcardIndex = 0; 
+                this.isFlipped = false; 
                 this.renderFlashcard();
             }
             
             renderFlashcard() {
                 const set = this.getCurrentSet();
-                
-                if (!set || !set.words || set.words.length === 0) {
-                    document.getElementById('fc-current-index').innerText = 0;
-                    document.getElementById('fc-total-count').innerText = 0;
-                    document.getElementById('fc-word').innerText = "Trống";
-                    document.getElementById('fc-ipa').innerText = "";
-                    document.getElementById('fc-synonyms').classList.add('hidden');
-                    document.getElementById('fc-meaning').innerText = "Bộ từ vựng này chưa có từ nào.";
-                    document.getElementById('fc-example').innerText = "Vui lòng vào Quản lý để thêm từ.";
-                    document.getElementById('flashcard-inner').classList.remove('rotate-y-180');
+                const $ = (id) => document.getElementById(id);
+                const el = {
+                    current: $('fc-current-index'), total: $('fc-total-count'), word: $('fc-word'),
+                    type: $('fc-type-badge'), ipa: $('fc-ipa'), backWord: $('fc-back-word'),
+                    backPos: $('fc-back-pos'), backIpa: $('fc-back-ipa'), synonyms: $('fc-synonyms'),
+                    meaning: $('fc-meaning'), example: $('fc-example'), inner: $('flashcard-inner'),
+                    mastery: $('fc-mastery-btn')
+                };
+
+                if (!el.inner || !el.current || !el.total || !el.word || !el.ipa || !el.meaning || !el.example) {
+                    console.error('[KLUNO Flashcards] Thiếu phần tử giao diện Flashcards.', el);
                     return;
                 }
-                
-                if (this.flashcardIndex >= set.words.length) {
-                    this.flashcardIndex = 0;
+
+                if (!set || !Array.isArray(set.words) || set.words.length === 0) {
+                    el.current.innerText = '0';
+                    el.total.innerText = '0';
+                    el.word.innerText = 'Trống';
+                    el.ipa.innerText = '';
+                    if (el.type) el.type.innerText = 'word';
+                    if (el.backWord) el.backWord.innerText = '';
+                    if (el.backPos) el.backPos.innerText = '';
+                    if (el.backIpa) el.backIpa.innerText = '';
+                    if (el.synonyms) { el.synonyms.innerText = ''; el.synonyms.classList.add('hidden'); }
+                    el.meaning.innerText = 'Bộ từ vựng này chưa có từ nào.';
+                    el.example.innerText = 'Vui lòng vào Quản lý để thêm từ.';
+                    el.inner.classList.remove('rotate-y-180');
+                    if (el.mastery) {
+                        el.mastery.className = 'flex-grow max-w-[200px] h-14 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold shadow-md flex items-center justify-center gap-2 transition';
+                        el.mastery.innerHTML = '<i class="fa-solid fa-check"></i> Đã nhớ';
+                    }
+                    return;
                 }
-                
+
+                if (this.flashcardIndex < 0 || this.flashcardIndex >= set.words.length) this.flashcardIndex = 0;
                 this.isFlipped = false;
-                document.getElementById('flashcard-inner').classList.remove('rotate-y-180');
-                
+                el.inner.classList.remove('rotate-y-180');
+
                 const w = set.words[this.flashcardIndex] || {};
-                document.getElementById('fc-current-index').innerText = this.flashcardIndex + 1;
-                document.getElementById('fc-total-count').innerText = set.words.length;
+                const pos = this.normalizePartOfSpeech(w.type || 'word');
+                const posShort = {noun:'noun', verb:'verb', adjective:'adj', adverb:'adv', pronoun:'pronoun', preposition:'prep', conjunction:'conj', determiner:'det', interjection:'interj', phrase:'phrase', phrasalverb:'phrasal verb'}[pos.key] || 'word';
 
-                // Mỗi lần render, toàn bộ nội dung của MẶT TRƯỚC và MẶT SAU
-                // đều lấy trực tiếp từ đúng phần tử hiện tại trong set.
-                // Không dùng dữ liệu mẫu cố định như "Forest / Rừng".
-                const word = String(w.en ?? w.word ?? '').trim();
-                const meaning = String(w.vi ?? w.meaning_vi ?? w.meaning ?? '').trim();
-                const ipa = String(w.ipa ?? w.pronunciation ?? '').trim();
-                const pos = this.normalizePartOfSpeech(w.type ?? w.part_of_speech ?? '');
-                const example = String(w.example ?? '').trim();
+                el.current.innerText = String(this.flashcardIndex + 1);
+                el.total.innerText = String(set.words.length);
+                if (el.type) el.type.innerText = posShort;
+                el.word.innerText = w.en || 'Chưa có từ';
+                el.ipa.innerText = w.ipa || '';
+                if (el.backWord) el.backWord.innerText = w.en || 'Chưa có từ';
+                if (el.backPos) el.backPos.innerText = pos.label || 'Từ vựng';
+                if (el.backIpa) el.backIpa.innerText = w.ipa || '/Chưa có IPA/';
 
-                document.getElementById('fc-type-badge').innerText = pos.label || 'Chưa phân loại';
-                document.getElementById('fc-word').innerText = word || 'Chưa có từ';
-                document.getElementById('fc-ipa').innerText = ipa || '/Chưa có IPA/';
-
-                const synEl = document.getElementById('fc-synonyms');
-                const synonyms = Array.isArray(w.synonyms)
-                    ? w.synonyms.filter(Boolean).map(String)
-                    : (typeof w.synonyms === 'string' && w.synonyms.trim() ? [w.synonyms.trim()] : []);
-                if (synonyms.length) {
-                    synEl.innerText = synonyms.join('; ');
-                    synEl.classList.remove('hidden');
-                } else {
-                    synEl.innerText = '';
-                    synEl.classList.add('hidden');
+                if (el.synonyms) {
+                    const synonyms = Array.isArray(w.synonyms) ? w.synonyms.filter(Boolean) : [];
+                    el.synonyms.innerText = synonyms.join('; ');
+                    el.synonyms.classList.toggle('hidden', synonyms.length === 0);
                 }
+                el.meaning.innerText = w.vi || 'Chưa có nghĩa tiếng Việt';
+                el.example.innerText = w.example || 'Chưa có ví dụ';
 
-                // MẶT SAU luôn được cập nhật theo chính từ đang học.
-                document.getElementById('fc-meaning').innerText = meaning || 'Chưa có nghĩa tiếng Việt';
-                document.getElementById('fc-example').innerText = example || 'Chưa có ví dụ';
-                
-                const btn = document.getElementById('fc-mastery-btn');
-                if (w.mastered || (w.progress && w.progress.masteryLevel >= 10)) {
-                    btn.className = 'flex-grow max-w-[200px] h-14 rounded-2xl bg-amber-500 hover:bg-amber-600 text-white font-bold shadow-md flex items-center justify-center gap-2 transition';
-                    btn.innerHTML = `<i class="fa-solid fa-rotate-left"></i> Cần ôn lại`;
-                } else {
-                    btn.className = 'flex-grow max-w-[200px] h-14 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold shadow-md flex items-center justify-center gap-2 transition';
-                    btn.innerHTML = `<i class="fa-solid fa-check"></i> Đã nhớ`;
-                }
-                if (this.flashcardAutoPlay && !this.isFlipped) {
-                    clearTimeout(this._fcAutoTimer);
-                    this._fcAutoTimer = setTimeout(() => this.speakCurrentWord(), 180);
+                if (el.mastery) {
+                    const mastered = !!(w.mastered || (w.progress && w.progress.masteryLevel >= 10));
+                    el.mastery.className = mastered
+                        ? 'flex-grow max-w-[200px] h-14 rounded-2xl bg-amber-500 hover:bg-amber-600 text-white font-bold shadow-md flex items-center justify-center gap-2 transition'
+                        : 'flex-grow max-w-[200px] h-14 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold shadow-md flex items-center justify-center gap-2 transition';
+                    el.mastery.innerHTML = mastered ? '<i class="fa-solid fa-rotate-left"></i> Cần ôn lại' : '<i class="fa-solid fa-check"></i> Đã nhớ';
                 }
             }
             
@@ -1729,77 +1613,21 @@
                 
                 this.isFlipped = !this.isFlipped; 
                 const inner = document.getElementById('flashcard-inner');
+                if (!inner) {
+                    console.error('[KLUNO Flashcards] Không tìm thấy #flashcard-inner');
+                    this.isFlipped = false;
+                    return;
+                }
                 if (this.isFlipped) {
                     inner.classList.add('rotate-y-180');
-                    // Chỉ tự động đọc khi người học bật chế độ tự động phát âm.
-                    if (this.flashcardAutoPlay) {
-                        const currentWord = set.words[this.flashcardIndex];
-                        this.speakWordAndExample(currentWord.en, currentWord.example);
-                    }
+                    // Khi lật sang mặt sau: tự động đọc từ tiếng Anh rồi đọc cả câu ví dụ.
+                    const currentWord = set.words[this.flashcardIndex];
+                    this.speakWordAndExample(currentWord.en, currentWord.example);
                 } else {
                     inner.classList.remove('rotate-y-180');
                 }
             }
             
-            toggleFlashcardOptions() {
-                const el = document.getElementById('fc-options');
-                if (el) el.classList.toggle('hidden');
-            }
-
-            toggleFlashcardAutoPlay() {
-                this.flashcardAutoPlay = !this.flashcardAutoPlay;
-                document.querySelectorAll('#fc-autoplay-toggle, #fc-autoplay-toggle-back, #fc-options .kluno-fc-switch').forEach(btn => {
-                    btn.classList.toggle('is-on', this.flashcardAutoPlay);
-                });
-                if (this.flashcardAutoPlay) this.speakCurrentWord();
-            }
-
-            startFlashcardPronunciation() {
-                const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-                const set = this.getCurrentSet();
-                if (!set?.words?.length) return;
-                const target = String(set.words[this.flashcardIndex].en || '').trim();
-                if (!Recognition) {
-                    alert('Trình duyệt này chưa hỗ trợ nhận diện giọng nói. Hãy dùng Chrome hoặc Edge.');
-                    return;
-                }
-                const btn = document.getElementById('fc-mic-btn');
-                btn?.classList.add('is-recording');
-                const rec = new Recognition();
-                rec.lang = document.getElementById('voice-accent')?.value || 'en-US';
-                rec.interimResults = false;
-                rec.maxAlternatives = 1;
-                rec.onresult = (event) => {
-                    const heard = event.results?.[0]?.[0]?.transcript || '';
-                    const normalize = x => x.toLowerCase().replace(/[^a-z0-9\s]/g, '').trim();
-                    const a = normalize(heard), b = normalize(target);
-                    const ok = a === b || a.includes(b) || b.includes(a);
-                    if (btn) btn.classList.toggle('is-correct', ok);
-                    setTimeout(() => btn?.classList.remove('is-correct'), 900);
-                    this.playFx(ok);
-                };
-                rec.onerror = () => btn?.classList.remove('is-recording');
-                rec.onend = () => btn?.classList.remove('is-recording');
-                rec.start();
-            }
-
-            shuffleFlashcards() {
-                const set = this.getCurrentSet();
-                if (!set?.words?.length) return;
-                for (let i = set.words.length - 1; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
-                    [set.words[i], set.words[j]] = [set.words[j], set.words[i]];
-                }
-                this.flashcardIndex = 0;
-                this.isFlipped = false;
-                this.saveData();
-                this.renderFlashcard();
-            }
-
-            showFlashcardGuide() {
-                alert('Cách học: nhìn từ → nghe phát âm → tự đọc bằng nút micro → lật thẻ để xem nghĩa và ví dụ → dùng mũi tên để chuyển thẻ.');
-            }
-
             nextFlashcard() { 
                 const set = this.getCurrentSet();
                 if(!set || !set.words || set.words.length === 0) return;
@@ -1961,8 +1789,6 @@
                     this.quizStreak = 0;
                     fb.className = "mt-6 p-4 rounded-xl font-bold text-sm bg-rose-100 text-rose-700 block"; fb.innerText = `Sai! Đáp án: ${cor}`;
                 }
-                this.recordQuizAttempt(wordObj, correct);
-                this.addXP(correct ? 10 : 2);
                 this.saveData();
                 setTimeout(() => { this.quizCurrentIndex++; this.renderQuizQuestion(); }, 1200);
             }
@@ -2074,14 +1900,45 @@
                 const newSet = { id: 's'+Date.now(), name: n, words: [] };
                 this.vocabSets.push(newSet); this.changeActiveSet(newSet.id); this.closeModals();
             }
-            saveWordForm(e) {
+            async saveWordForm(e) {
                 e.preventDefault();
-                this.getCurrentSet().words.push({
-                    id: 'w'+Date.now(), en: document.getElementById('modal-word-en').value,
-                    ipa: document.getElementById('modal-word-ipa').value, vi: document.getElementById('modal-word-vi').value, type: 'Word',
+                const en = document.getElementById('modal-word-en').value.trim();
+                if (!en) return;
+                const word = {
+                    id: 'w'+Date.now(),
+                    en,
+                    ipa: document.getElementById('modal-word-ipa').value.trim(),
+                    vi: document.getElementById('modal-word-vi').value.trim(),
+                    type: 'other',
+                    example: '',
+                    example_vi: '',
+                    synonyms: [],
+                    collocations: [],
+                    cefr: '',
                     progress: { masteryLevel:0, wrongCount:0, nextReview:0 }
-                });
-                this.saveData(); this.closeModals(); this.renderManageTable();
+                };
+                this.getCurrentSet().words.push(word);
+                this.saveData(); this.closeModals(); this.renderManageTable(); this.renderFlashcard();
+
+                // Tự động nhờ AI hoàn thiện từ loại, nghĩa, IPA và ví dụ sau khi thêm từ.
+                try {
+                    const ai = await this.enrichWordWithAI(word);
+                    if (ai) {
+                        word.vi = ai.meaning_vi ?? ai.vi ?? word.vi;
+                        word.ipa = ai.pronunciation ?? ai.ipa ?? word.ipa;
+                        word.type = ai.part_of_speech ?? ai.type ?? word.type;
+                        word.example = ai.example ?? word.example;
+                        word.example_vi = ai.example_vi ?? word.example_vi;
+                        word.cefr = ai.cefr ?? word.cefr;
+                        word.synonyms = Array.isArray(ai.synonyms) ? ai.synonyms : word.synonyms;
+                        word.collocations = Array.isArray(ai.collocations) ? ai.collocations : word.collocations;
+                        this.saveData();
+                        this.renderManageTable();
+                        this.renderFlashcard();
+                    }
+                } catch (err) {
+                    console.warn('AI enrichment chưa sẵn sàng:', err.message);
+                }
             }
             deleteWord(id) {
                 if(confirm('Xóa?')) { this.getCurrentSet().words = this.getCurrentSet().words.filter(w=>w.id!==id); this.saveData(); this.renderManageTable(); }
@@ -2162,105 +2019,45 @@
                 if(this.aiGeneratedSet) { this.vocabSets.push({id: 's'+Date.now(), ...this.aiGeneratedSet}); this.saveData(); this.changeActiveSet(this.vocabSets[this.vocabSets.length-1].id); alert('Lưu thành công!'); }
             }
  
-            async renderLeaderboard() {
+            renderLeaderboard() {
+                document.getElementById('rank-total-score').innerText = 5;
+                const heatmap = document.getElementById('activity-heatmap');
+                if (heatmap) {
+                    let dotsHtml = '';
+                    for (let col = 0; col < 28; col++) {
+                        for (let row = 0; row < 7; row++) {
+                            let level = 0;
+                            if (Math.random() > 0.6) level = Math.floor(Math.random() * 4) + 1;
+                            dotsHtml += `<div class="heatmap-cell ${level > 0 ? 'level-' + level : ''}"></div>`;
+                        }
+                    }
+                    heatmap.innerHTML = dotsHtml;
+                }
+ 
                 const listEl = document.getElementById('lp-leaderboard-list');
                 if (!listEl) return;
                 const myName = this.currentUser?.user_metadata?.full_name || 'Người học';
-                const sticky = document.getElementById('sticky-user-name');
-                if (sticky) sticky.innerText = myName;
-                if (!this.supabase) {
-                    listEl.innerHTML = '<div class="p-6 text-sm text-slate-500">Đăng nhập và cấu hình Supabase để xem bảng xếp hạng thật.</div>';
-                    return;
-                }
-                const { data, error } = await this.supabase.from('kluno_profiles').select('user_id,display_name,xp,streak').order('xp',{ascending:false}).limit(20);
-                if (error) { listEl.innerHTML = '<div class="p-6 text-sm text-rose-500">Không thể tải bảng xếp hạng.</div>'; return; }
-                document.getElementById('rank-total-score').innerText = this.profile.xp || 0;
-                listEl.innerHTML = (data || []).map((u,i) => {
-                    const isMe = u.user_id === this.currentUser?.id;
-                    return `<div class="flex items-center justify-between p-5 border-b border-slate-100 dark:border-slate-800 ${isMe?'bg-indigo-50/60 dark:bg-indigo-950/20':''}">
-                        <div class="flex items-center gap-4"><span class="font-black text-slate-400 w-6 text-center">${i+1}</span><div class="w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-black">${this.escapeHtml((u.display_name||'U').charAt(0).toUpperCase())}</div><div><p class="font-bold">${this.escapeHtml(u.display_name||'Người học')}</p><p class="text-xs text-slate-400">🔥 ${Number(u.streak||0)} ngày</p></div></div><p class="text-xl font-black">${Number(u.xp||0).toLocaleString()} XP</p></div>`;
-                }).join('') || '<div class="p-6 text-sm text-slate-500">Chưa có dữ liệu.</div>';
+                document.getElementById('sticky-user-name').innerText = myName;
+ 
+                const demoUsers = [
+                    { name: 'Minh', score: 9028 }, { name: 'trang nguyen', score: 4948 }, { name: 'Nga Thuy', score: 3591 },
+                    { name: 'Nông Khánh Linh', score: 2893 }, { name: 'Ẩn danh', score: 2658 }, { name: 'Ẩn danh', score: 2593 },
+                    { name: myName, score: 0, isMe: true }
+                ].sort((a, b) => b.score - a.score);
+ 
+                // THÊM: loading="lazy" và alt
+                listEl.innerHTML = demoUsers.map((u, i) => `
+                    <div class="flex items-center justify-between p-5 border-b border-slate-100 dark:border-slate-800 ${u.isMe ? 'bg-amber-50/50' : 'hover:bg-slate-50'} transition">
+                        <div class="flex items-center gap-5">
+                            <span class="font-bold text-slate-400 w-6 text-center">${i+1}</span>
+                            <div class="w-10 h-10 rounded-full overflow-hidden bg-slate-200"><img src="https://ui-avatars.com/api/?name=${u.name}&background=random" alt="Avatar của ${this.escapeHtml(u.name)}" loading="lazy" class="w-full h-full object-cover"></div>
+                            <span class="font-bold">${this.escapeHtml(u.name)}</span>
+                        </div>
+                        <div class="text-right"><p class="text-xl font-black">${u.score.toLocaleString()}</p></div>
+                    </div>
+                `).join('');
             }
-
-            loadProfile() {
-                try { return JSON.parse(localStorage.getItem('kluno_profile_v2')) || { xp:0, streak:0, lastStudyDate:null, cefr:null, placementScore:null, skill:{listening:0,speaking:0,reading:0,writing:0} }; }
-                catch { return { xp:0, streak:0, lastStudyDate:null, cefr:null, placementScore:null, skill:{listening:0,speaking:0,reading:0,writing:0} }; }
-            }
-            saveProfile() { localStorage.setItem('kluno_profile_v2', JSON.stringify(this.profile)); }
-            loadQuizStats() { try { return JSON.parse(localStorage.getItem('kluno_quiz_stats_v1')) || {correct:0,wrong:0}; } catch { return {correct:0,wrong:0}; } }
-            saveQuizStats() { localStorage.setItem('kluno_quiz_stats_v1', JSON.stringify(this.quizStats)); }
-            addXP(points) {
-                this.profile.xp = Math.max(0, Number(this.profile.xp||0) + Number(points||0));
-                const today = new Date().toISOString().slice(0,10);
-                const yesterday = new Date(Date.now()-86400000).toISOString().slice(0,10);
-                if (this.profile.lastStudyDate !== today) this.profile.streak = this.profile.lastStudyDate === yesterday ? Number(this.profile.streak||0)+1 : 1;
-                this.profile.lastStudyDate = today;
-                this.saveProfile();
-                this.syncProfile().catch(()=>{});
-                this.renderGrowthDashboard();
-            }
-            async syncProfile() {
-                if (!this.supabase || !this.currentUser) return;
-                await this.supabase.from('kluno_profiles').upsert({ user_id:this.currentUser.id, display_name:this.currentUser.user_metadata?.full_name || this.currentUser.email?.split('@')[0] || 'Người học', xp:Number(this.profile.xp||0), streak:Number(this.profile.streak||0), cefr:this.profile.cefr || null, placement_score:this.profile.placementScore ?? null, updated_at:new Date().toISOString() }, {onConflict:'user_id'});
-            }
-            async syncWordMastery(word) {
-                if (!this.supabase || !this.currentUser || !word) return;
-                const p=this.ensureProgress(word);
-                await this.supabase.from('word_mastery').upsert({user_id:this.currentUser.id,word_id:String(word.id),word:String(word.en||word.word||''),mastery_level:Number(p.masteryLevel||0),wrong_count:Number(p.wrongCount||0),repetitions:Number(p.repetitions||0),interval_days:Number(p.interval||0),ease_factor:Number(p.easeFactor||2.5),last_reviewed:p.lastReviewed?new Date(p.lastReviewed).toISOString():null,next_review:p.nextReview?new Date(p.nextReview).toISOString():null,updated_at:new Date().toISOString()},{onConflict:'user_id,word_id'});
-            }
-            recordQuizAttempt(word, correct) {
-                if (correct) this.quizStats.correct++; else this.quizStats.wrong++;
-                this.saveQuizStats();
-                if (this.supabase && this.currentUser) this.supabase.from('learning_attempts').insert({user_id:this.currentUser.id,activity_type:'quiz',word_id:String(word?.id||''),is_correct:!!correct,xp_earned:correct?10:2,created_at:new Date().toISOString()}).then(()=>{}).catch(()=>{});
-                this.renderGrowthDashboard();
-            }
-            getCefrFromPlacement(score,total) {
-                const pct = total ? score/total : 0;
-                if (pct < .3) return 'A1'; if (pct < .5) return 'A2'; if (pct < .7) return 'B1'; if (pct < .85) return 'B2'; if (pct < .95) return 'C1'; return 'C2';
-            }
-            getPlacementQuestions() {
-                return [
-                    {q:'She ___ to school every day.',o:['go','goes','going','gone'],a:1},{q:'I have lived here ___ 2022.',o:['for','since','from','during'],a:1},
-                    {q:'If I had more time, I ___ another language.',o:['learn','will learn','would learn','learned'],a:2},{q:'The opposite of “increase” is ___.',o:['reduce','improve','expand','raise'],a:0},
-                    {q:'“Reliable” is closest in meaning to ___.',o:['expensive','dependable','difficult','famous'],a:1},{q:'By next year, she ___ English for five years.',o:['studies','will study','will have studied','has studied'],a:2},
-                    {q:'He apologized ___ being late.',o:['for','to','at','on'],a:0},{q:'The report was ___ than expected.',o:['detailed','more detailed','most detailed','detail'],a:1},
-                    {q:'Choose the most natural sentence.',o:['I strongly agree with you.','I agree strongly you.','I am strongly agree you.','I strong agree with you.'],a:0},{q:'“Despite” is followed by ___.',o:['a noun/gerund','a full clause only','an infinitive only','a modal verb'],a:0}
-                ];
-            }
-            startPlacementTest() {
-                this.placement={index:0,score:0,answers:[],questions:this.getPlacementQuestions()};
-                this.switchView('placement');
-            }
-            renderPlacementQuestion() {
-                const p=this.placement, q=p.questions[p.index];
-                if(!q) return this.finishPlacement();
-                document.getElementById('placement-question').innerText=q.q;
-                document.getElementById('placement-progress').innerText=`${p.index+1} / ${p.questions.length}`;
-                document.getElementById('placement-score').innerText=`${p.score} đúng`;
-                document.getElementById('placement-bar').style.width=`${((p.index)/p.questions.length)*100}%`;
-                document.getElementById('placement-options').innerHTML=q.o.map((x,i)=>`<button onclick="app.answerPlacement(${i})" class="w-full text-left p-4 rounded-2xl border-2 border-slate-200 dark:border-slate-700 hover:border-indigo-500 hover:bg-indigo-50/50 dark:hover:bg-indigo-950/20 font-bold transition"><span class="inline-flex w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 items-center justify-center mr-2">${String.fromCharCode(65+i)}</span>${this.escapeHtml(x)}</button>`).join('');
-            }
-            answerPlacement(i) {
-                const q=this.placement.questions[this.placement.index];
-                if(i===q.a) this.placement.score++;
-                this.placement.answers.push({q:q.q,selected:i,correct:i===q.a});
-                this.placement.index++;
-                if(this.placement.index>=this.placement.questions.length) this.finishPlacement(); else this.renderPlacementQuestion();
-            }
-            finishPlacement() {
-                const p=this.placement; const cefr=this.getCefrFromPlacement(p.score,p.questions.length);
-                this.profile.cefr=cefr; this.profile.placementScore=p.score; this.saveProfile(); this.syncProfile().catch(()=>{});
-                const msg=`Kết quả: ${p.score}/${p.questions.length}\nMức CEFR ước lượng: ${cefr}.\nKLUNO sẽ dùng mức này để gợi ý nội dung học phù hợp.`;
-                alert(msg); this.switchView('dashboard');
-            }
-            renderGrowthDashboard() {
-                const cefr=document.getElementById('dash-cefr'); if(cefr) cefr.innerText=this.profile.cefr || 'Chưa đánh giá';
-                const skills=this.profile.skill||{}; const rows=[['listening','Nghe'],['speaking','Nói'],['reading','Đọc'],['writing','Viết']];
-                const bars=document.getElementById('skill-bars'); if(bars) bars.innerHTML=rows.map(([k,l])=>`<div><div class="flex justify-between text-sm font-bold mb-1"><span>${l}</span><span>${Math.round(Number(skills[k]||0))}%</span></div><div class="h-2.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-indigo-500 rounded-full" style="width:${Math.max(0,Math.min(100,Number(skills[k]||0)))}%"></div></div></div>`).join('');
-                const total=this.quizStats.correct+this.quizStats.wrong, pct=total?Math.round(this.quizStats.correct/total*100):0; const qa=document.getElementById('quiz-accuracy'); if(qa) qa.innerText=pct+'%';
-                const qb=document.getElementById('quiz-bars'); if(qb) qb.innerHTML=`<div><div class="flex justify-between text-sm font-bold mb-1"><span>Đúng</span><span>${this.quizStats.correct}</span></div><div class="h-2.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-emerald-500 rounded-full" style="width:${pct}%"></div></div></div><div><div class="flex justify-between text-sm font-bold mb-1"><span>Sai</span><span>${this.quizStats.wrong}</span></div><div class="h-2.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden"><div class="h-full bg-rose-500 rounded-full" style="width:${total?100-pct:0}%"></div></div></div>`;
-            }
-
+ 
             toggleTheme() { document.documentElement.classList.toggle('dark'); }
             toggleMobileMenu() { 
                 document.getElementById('lp-sidebar').classList.toggle('mobile-open'); 
